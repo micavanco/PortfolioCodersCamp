@@ -54,7 +54,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+}
+
+.about-me-wrapper{
+    width: 480px;
+    height: 258px;
+    perspective: 600px;
 }
 
 .contact-card-front{
@@ -62,17 +67,17 @@
     height: 258px;
     box-shadow: 0 7px 20px -8px rgba(0,0,0,0.78);
     position: absolute;
-    transition: all 0.6s ease-in-out;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
 }
 
 .contact-card-ghost:hover ~ .contact-card-back{
-    transform: rotate3d(0, 180, 10, -180deg);
-    opacity: 1;
+    transform: rotateY(0deg);
 }
 
 .contact-card-ghost:hover ~ .contact-card-front{
-    transform: rotate3d(0, 180, 10, -180deg);
-    opacity: 0;
+    transform: rotateY(180deg);
 }
 
 .contact-card-ghost{
@@ -94,14 +99,27 @@
     z-index: 1;
 }
 
+.contact-card-back::before{
+    content: '';
+    position: absolute;
+    clip-path: polygon(100% 0%, 66% 26%, 75% 56%, 68% 78%, 82% 100%, 0 100%, 0 0);
+    height: 100%;
+    width: 100%;
+    background: white;
+    z-index: 1;
+    transform: rotateZ(180deg);
+}
+
 .contact-card-back{
     width: 480px;
     height: 258px;
     background: white;
     box-shadow: 0 7px 20px -8px rgba(0,0,0,0.78);
-    transition: all 0.6s ease-in-out;
     position: absolute;
-    opacity: 0;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
 }
 
 .contact-section{
@@ -137,6 +155,9 @@
     background: rgb(36, 99, 130);
 }
 
+.transform180{
+    transform: rotateZ(180deg);
+}
 
 /* ----------------------------- PORTFOLIO -------------------------------- */
 .portfolio-container{
