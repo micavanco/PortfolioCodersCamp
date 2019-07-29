@@ -45,15 +45,88 @@
 
 
 /* ----------------------------- ABOUT ME -------------------------------- */
+.about-me-container{
+    background: url("../resources/office.jpg") center;
+    background-size: cover;
+    height: 800px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-card-front{
+    width: 480px;
+    height: 258px;
+    background: white;
+    box-shadow: 0 7px 20px -8px rgba(0,0,0,0.78);
+    position: relative;
+}
+
+.contact-card-front::before{
+    content: 'siema';
+    position: absolute;
+    clip-path: polygon(99% 0%, 86% 5%, 79% 8%, 72% 13%, 69% 17%, 69% 22%, 69% 28%, 73% 30%, 77% 35%, 78% 42%, 77% 49%, 77% 56%, 75% 60%, 71% 64%, 68% 70%, 68% 75%, 70% 80%, 74% 85%, 77% 92%, 80% 96%, 82% 100%, 0 100%, 0 0);
+    height: 100%;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.contact-card-back{
+
+}
+
+.contact-section{
+    height: 86px;
+    width: auto;
+}
+
+.contact-crl-first{
+    background: rgb(110, 101, 88);
+}
+
+.contact-crl-second{
+    background: rgb(110, 101, 76);
+}
+
+.contact-crl-third{
+    background: rgb(110, 101, 67);
+}
 
 
 /* ----------------------------- PORTFOLIO -------------------------------- */
 .portfolio-container{
+    height: 1200px;
+    width: auto;
     background: url("../resources/bird-view.jpg") center;
     background-size: cover;
+}
+
+.portfolio-section{
+    background: rgba(110, 101, 88, 0.4);
     height: 1200px;
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.portfolio-box{
+    width: 180px;
+    height: 180px;
+    background: rgba(123, 123, 123, 0.5);
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: -1px 3px 18px 0 rgba(0,0,0,0.75);
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.portfolio-box:hover{
+    box-shadow: -1px 3px 18px 5px rgba(0,0,0,0.75);
 }
 
 /* ----------------------------- SKILLS -------------------------------- */
