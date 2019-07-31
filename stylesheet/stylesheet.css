@@ -12,6 +12,10 @@
     --tab-nav-color: #6E6558;
 }
 
+a{
+    text-decoration: none;
+}
+
 
 /* ----------------------------- HEADER -------------------------------- */
 .header{
@@ -46,7 +50,47 @@
 
 
 /* ----------------------------- ABOUT ME -------------------------------- */
+.about-me-container{
+    height: 500px;
+    width: auto;
+    border-top: 15px ridge black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.face-container{
+    height: 250px;
+    width: 190px;
+    background: #fafafa;
+    clip-path: polygon(0 25%, 75% 0, 100% 0, 100% 75%, 25% 100%);
+    border-right: 2px dashed gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face-container > img{
+    border-radius: 50%;
+    height: 150px;
+    width: 100px;
+}
+
+.about-details-container{
+    height: 250px;
+    width: 290px;
+    background: #fafafa;
+    clip-path: polygon(0 0, 25% 0, 100% 25%, 75% 100%, 0 75%);
+    border-left: 2px dashed gray;
+}
+
+.about-details-container > h3{
+    margin: 20px;
+}
+
+.about-details-container > h4{
+    margin: 20px;
+}
 
 /* ----------------------------- PORTFOLIO -------------------------------- */
 .portfolio-container{
