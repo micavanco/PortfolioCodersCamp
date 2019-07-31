@@ -46,118 +46,7 @@
 
 
 /* ----------------------------- ABOUT ME -------------------------------- */
-.about-me-container{
-    background: url("../resources/office.jpg") center;
-    background-size: cover;
-    height: 800px;
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.about-me-wrapper{
-    width: 480px;
-    height: 258px;
-    perspective: 600px;
-}
-
-.contact-card-front{
-    width: 480px;
-    height: 258px;
-    box-shadow: 0 7px 20px -8px rgba(0,0,0,0.78);
-    position: absolute;
-    transition: transform 1s ease-in-out;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-}
-
-.contact-card-ghost:hover ~ .contact-card-back{
-    transform: rotateY(0deg);
-}
-
-.contact-card-ghost:hover ~ .contact-card-front{
-    transform: rotateY(180deg);
-}
-
-.contact-card-ghost{
-    width: 480px;
-    height: 258px;
-    position: absolute;
-    opacity: 0;
-    background: white;
-    z-index: 9;
-}
-
-.contact-card-front::before{
-    content: '';
-    position: absolute;
-    clip-path: polygon(100% 0%, 66% 26%, 75% 56%, 68% 78%, 82% 100%, 0 100%, 0 0);
-    height: 100%;
-    width: 100%;
-    background: white;
-    z-index: 1;
-}
-
-.contact-card-back::before{
-    content: '';
-    position: absolute;
-    clip-path: polygon(100% 0%, 66% 26%, 75% 56%, 68% 78%, 82% 100%, 0 100%, 0 0);
-    height: 100%;
-    width: 100%;
-    background: white;
-    z-index: 1;
-    transform: rotateZ(180deg);
-}
-
-.contact-card-back{
-    width: 480px;
-    height: 258px;
-    background: white;
-    box-shadow: 0 7px 20px -8px rgba(0,0,0,0.78);
-    position: absolute;
-    transition: transform 1s ease-in-out;
-    transform-style: preserve-3d;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-}
-
-.contact-section{
-    height: 86px;
-    width: auto;
-    display: flow-root;
-}
-
-.contact-icon{
-    float: right;
-    padding: 30px;
-}
-
-.contact-label{
-    float: left;
-    z-index: 7;
-    margin-top: 2px;
-    padding: 23px;
-    position: absolute;
-    width: 50%;
-    background: rgb(32, 130, 179);
-}
-
-.contact-crl-first{
-    background: rgb(3, 169, 252);
-}
-
-.contact-crl-second{
-    background: rgb(32, 130, 179);
-}
-
-.contact-crl-third{
-    background: rgb(36, 99, 130);
-}
-
-.transform180{
-    transform: rotateZ(180deg);
-}
 
 /* ----------------------------- PORTFOLIO -------------------------------- */
 .portfolio-container{
@@ -196,7 +85,106 @@
 
 
 /* ----------------------------- CONTACT -------------------------------- */
+.contact-container{
+    background: url("../resources/office.jpg") center;
+    background-size: cover;
+    height: 800px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.contact-wrapper{
+    width: 480px;
+    height: 258px;
+    perspective: 600px;
+}
+
+.contact-card{
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+    transform-style: preserve-3d;
+    position: relative;
+    cursor: pointer;
+}
+
+.contact-card-front{
+    width: 100%;
+    height: 100%;
+    background: white;
+    box-shadow: 0 7px 20px -8px rgba(0,0,0,0.78);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.contact-card-back{
+    width: 100%;
+    height: 100%;
+    background: white;
+    box-shadow: 0 7px 20px -8px rgba(0,0,0,0.78);
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.flip-card{
+    transform: rotateY(180deg);
+}
+
+.contact-section{
+    height: 86px;
+    width: auto;
+    display: flow-root;
+}
+
+.contact-icon{
+    float: right;
+    padding: 26px 30px;
+}
+
+.contact-label{
+    float: left;
+    z-index: 7;
+    padding: 23px 0;
+    width: 59%;
+    background: rgb(221, 222, 218);
+}
+
+.name-contact-wrapper{
+    width: available;
+    padding: 0 23px;
+    background: rgb(225, 226, 222);
+}
+
+.contact-crl-first{
+    background: var(--main-bg-color);
+    clip-path: polygon(100% 0, 66% 44%, 75% 100%, 100% 100%);
+}
+
+.contact-crl-second{
+    background: #6e9a99;
+    clip-path: polygon(100% 0, 75% 0, 60% 50%, 59% 50%, 59% 0, 0 0, 0 100%, 59% 100%, 59% 50%, 75% 100%, 100% 100%);
+}
+
+.contact-crl-third{
+    background: #496968;
+    clip-path: polygon(100% 0, 75% 0 , 66% 64%, 100% 100%);
+}
+
+.icon {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+.info-padding{
+    padding: 23px 0 23px 5px;
+}
 
 /* ----------------------------- FOOTER -------------------------------- */
 .footer{
