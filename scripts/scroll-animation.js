@@ -3,15 +3,21 @@
     let faceContainer = document.querySelector('.face-container');
     let aboutDetailsContainer = document.querySelector('.about-details-container');
     let skillsBoxes = document.querySelectorAll('.skills-box');
-    let skillsBox1 = skillsBoxes[0];
-    let skillsBox2 = skillsBoxes[1];
-    let skillsBox3 = skillsBoxes[2];
+    let portfolioBoxes = document.querySelectorAll('.portfolio-box');
+    let contactCard = document.querySelector('.contact-wrapper');
+
+    skillsBoxes.forEach(e =>
+        window.addEventListener('scroll', () => {animateObjects(e, 'skills-move')}, false)
+    );
+
+    portfolioBoxes.forEach(e =>
+        window.addEventListener('scroll', () => {animateObjects(e, 'portfolio-move')}, false)
+    );
 
     window.addEventListener('scroll', () => {animateObjects(faceContainer, 'face-move')}, false);
     window.addEventListener('scroll', () => {animateObjects(aboutDetailsContainer, 'face-move')}, false);
-    window.addEventListener('scroll', () => {animateObjects(skillsBox1, 'skills-move')}, false);
-    window.addEventListener('scroll', () => {animateObjects(skillsBox2, 'skills-move')}, false);
-    window.addEventListener('scroll', () => {animateObjects(skillsBox3, 'skills-move')}, false);
+    window.addEventListener('scroll', () => {animateObjects(contactCard, 'contact-move')}, false);
+
 })();
 
 function isElementInViewport(e){

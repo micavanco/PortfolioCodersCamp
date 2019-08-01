@@ -60,7 +60,7 @@ a{
 
 /* ----------------------------- ABOUT ME -------------------------------- */
 .about-me-container{
-    height: 500px;
+    height: 300px;
     width: auto;
     border-top: 15px ridge black;
     display: flex;
@@ -120,7 +120,7 @@ a{
 
 /* ----------------------------- SKILLS -------------------------------- */
 .skills-container{
-    min-height: 500px;
+    min-height: 300px;
     width: auto;
     border-bottom: 15px ridge black;
     display: flex;
@@ -168,7 +168,7 @@ a{
 
 /* ----------------------------- PORTFOLIO -------------------------------- */
 .portfolio-container{
-    height: 1200px;
+    min-height: 600px;
     width: auto;
     background: url("../resources/bird-view.jpg") center;
     background-size: cover;
@@ -176,26 +176,41 @@ a{
 
 .portfolio-section{
     background: rgba(110, 101, 88, 0.4);
-    height: 1200px;
+    min-height: 600px;
     max-width: 600px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .portfolio-box{
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
     background: rgba(123, 123, 123, 0.5);
-    margin: 10px;
+    margin: 25px;
     border-radius: 20px;
     box-shadow: -1px 3px 18px 0 rgba(0,0,0,0.75);
     transition: all 200ms ease-in-out;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--main-btn-color);
+    opacity: 0;
+    transform: translateY(-5px);
 }
 
 .portfolio-box:hover{
     box-shadow: -1px 3px 18px 5px rgba(0,0,0,0.75);
+}
+
+.portfolio-move{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ----------------------------- CONTACT -------------------------------- */
@@ -213,6 +228,9 @@ a{
     width: 480px;
     height: 258px;
     perspective: 600px;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: all 1s ease-in-out;
 }
 
 .contact-card{
@@ -291,6 +309,11 @@ a{
     padding: 23px 0 23px 5px;
 }
 
+.contact-move{
+    transform: translateY(0);
+    opacity: 1;
+}
+
 /* ----------------------------- FOOTER -------------------------------- */
 .footer{
     bottom: 0;
@@ -304,4 +327,21 @@ a{
 .copyright{
     text-align: center;
     padding-top: 35px;
+}
+
+/* ------$---------$------------ PHONE SCREEN -----------$---------$----------- */
+@media all and (max-width: 582px) {
+    /* ----------------------------- ABOUT ME -------------------------------- */
+    .face-container{
+        height: 160px;
+        width: 100px;
+        transform: translateX(-5%);
+    }
+
+    .about-details-container{
+        height: 160px;
+        width: 200px;
+        transform: translateX(5%);
+    }
+
 }
