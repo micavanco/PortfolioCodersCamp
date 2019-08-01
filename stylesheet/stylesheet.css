@@ -57,17 +57,21 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
 
 .face-container{
     height: 250px;
     width: 190px;
-    background: #fafafa;
+    background: #fdfdfd;
     clip-path: polygon(0 25%, 75% 0, 100% 0, 100% 75%, 25% 100%);
     border-right: 2px dashed gray;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: all 1s ease-in-out;
 }
 
 .face-container > img{
@@ -79,9 +83,12 @@ a{
 .about-details-container{
     height: 250px;
     width: 290px;
-    background: #fafafa;
+    background: #fdfdfd;
     clip-path: polygon(0 0, 25% 0, 100% 25%, 75% 100%, 0 75%);
     border-left: 2px dashed gray;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: all 1s ease-in-out;
 }
 
 .about-details-container > h3{
@@ -90,6 +97,16 @@ a{
 
 .about-details-container > h4{
     margin: 20px;
+}
+
+.face-move{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-move{
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* ----------------------------- PORTFOLIO -------------------------------- */
