@@ -2,10 +2,16 @@
 
     let faceContainer = document.querySelector('.face-container');
     let aboutDetailsContainer = document.querySelector('.about-details-container');
+    let skillsBoxes = document.querySelectorAll('.skills-box');
+    let skillsBox1 = skillsBoxes[0];
+    let skillsBox2 = skillsBoxes[1];
+    let skillsBox3 = skillsBoxes[2];
 
     window.addEventListener('scroll', () => {animateObjects(faceContainer, 'face-move')}, false);
     window.addEventListener('scroll', () => {animateObjects(aboutDetailsContainer, 'face-move')}, false);
-
+    window.addEventListener('scroll', () => {animateObjects(skillsBox1, 'skills-move')}, false);
+    window.addEventListener('scroll', () => {animateObjects(skillsBox2, 'skills-move')}, false);
+    window.addEventListener('scroll', () => {animateObjects(skillsBox3, 'skills-move')}, false);
 })();
 
 function isElementInViewport(e){
