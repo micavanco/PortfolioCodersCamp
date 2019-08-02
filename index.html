@@ -5,12 +5,13 @@
     <title>Portfolio Michał Olech</title>
     <link rel="stylesheet" href="stylesheet/stylesheet.css" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./resources/favicon.png">
 </head>
 <body>
     <div class="main-container">
         <!-- HEADER  -->
         <div class="header">
-            <div class="logo">OLECH</div>
+            <img class="nav-logo" src="resources/logo_transparent.png" alt="OLECH" height="70" width="70"/>
             <div class="nav-btn"><a>Contact</a></div>
             <div class="nav-btn"><a>Portfolio</a></div>
             <div class="nav-btn"><a>Skills</a></div>
@@ -19,6 +20,12 @@
 
         <!-- MAIN PAGE  -->
         <div class="main-page-container">
+            <div class="logo-container">
+                <img class="logo" id="l1" src="resources/logo_parts/left.png" alt="OLECH"/>
+                <img class="logo" id="p1" src="resources/logo_parts/right.png" alt="OLECH"/>
+                <img class="logo" id="p2" src="resources/logo_parts/left.png" alt="OLECH"/>
+                <img class="logo" id="l2" src="resources/logo_parts/leftdown.png" alt="OLECH"/>
+            </div>
 
         </div>
 
@@ -172,7 +179,7 @@
 
                         <div class="contact-section contact-crl-first flip-card">
                             <div class="contact-icon flip-card info-padding">GitHub:<br/>
-                                <span style="font-size: 14px;color: aliceblue;">github.com/micavanco</span></div>
+                                <span id="github">github.com/micavanco</span></div>
                         </div>
 
                         <div class="contact-section contact-crl-second flip-card">
@@ -188,9 +195,9 @@
 
                         <div id="email-info" class="contact-section contact-crl-third flip-card">
                             <div class="contact-icon flip-card info-padding">E-Mail:<br/>
-                                <span style="font-size: 11px;color: aliceblue">
+                                <a id="email">
                                     michal.olech.mail@gmail.com
-                                </span>
+                                </a>
                             </div>
                         </div>
 
@@ -209,6 +216,7 @@
     </div>
     <script type="text/javascript"  src="./scripts/contact-card.js"></script>
     <script type="text/javascript"  src="./scripts/scroll-animation.js"></script>
+    <script type="text/javascript"  src="./scripts/logo-animation.js"></script>
 </body>
 
 </html>
