@@ -56,12 +56,12 @@ a{
     width: 100%;
     background: var(--main-bg-color);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .logo-container{
-    background: green;
     width: 464px;
     height: 50%;
     position: relative;
@@ -71,22 +71,34 @@ a{
     position: absolute;
 }
 
-#p1{
+.p1{
     left: 230px;
 }
 
-#p2{
+.p2{
     right: 0;
     top: 135px;
 }
 
-#l2{
+.l2{
     top: 170px;
 }
 
 .logo{
     opacity: 0;
-    transition: all 1s ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+
+.setDown{
+    top: 120px;
+}
+
+.setDown1{
+    top: 255px;
+}
+
+.setDown2{
+    top: 290px;
 }
 
 
@@ -422,6 +434,14 @@ a{
 
     .nav-btn{
         display: none;
+    }
+
+    .logo-bottom{
+        width: 90%;
+    }
+
+    .logo-container{
+        transform: scale(0.5);
     }
 
 }
