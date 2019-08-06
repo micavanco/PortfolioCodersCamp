@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 :root{
@@ -33,7 +34,6 @@ a{
     width: 100%;
     display: flow-root;
     position: fixed;
-    color: var(--main-btn-color);
     z-index: 10;
     margin-top: -6px;
 }
@@ -49,6 +49,42 @@ a{
     cursor: pointer;
 }
 
+.nav-btn a{
+    color: var(--main-btn-color);
+}
+
+.hamburger-btn{
+    display: none;
+    height: 35px;
+    width: 35px;
+    float: right;
+    padding: 22px;
+}
+
+.bar1, .bar2, .bar3{
+    width: content-box;
+    height: 5px;
+    margin-bottom: 5px;
+    background: var(--main-btn-color);
+    transition: 0.4s ease-in-out;
+}
+
+.mobile-menu{
+    position: fixed;
+    display: none;
+}
+
+.onVisible .bar1{
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.onVisible .bar2{
+    opacity: 0;
+}
+
+.onVisible .bar3{
+    transform: rotate(45deg) translate(-8px, -5px);
+}
 
 /* ----------------------------- MAIN PAGE -------------------------------- */
 .main-page-container{
@@ -366,7 +402,7 @@ a{
 }
 
 #github{
-    font-size: 14px;
+    font-size: 13px;
     color: aliceblue;
 }
 
@@ -407,7 +443,7 @@ a{
     }
 
     .about-details-container > h4{
-        font-size: 13px;
+        font-size: 11px;
     }
 
     .face-move{
@@ -421,15 +457,28 @@ a{
     }
 
     #email{
-        font-size: 8px;
+        width: 85px;
+        height: 60px;
+        word-break: break-word;
+        font-size: 10px;
     }
 
     #github{
-        font-size: 10px;
+        width: 80px;
+        height: 60px;
+        word-break: break-word;
+    }
+
+    #number{
+        font-size: 13px;
     }
 
     .contact-card{
         width: 90%;
+    }
+
+    .contact-wrapper{
+        opacity: 1;
     }
 
     .nav-btn{
@@ -437,11 +486,38 @@ a{
     }
 
     .logo-bottom{
+        padding-top: 80px;
         width: 90%;
     }
 
     .logo-container{
         transform: scale(0.5);
+    }
+
+    .hamburger-btn{
+        display: inline-block;
+    }
+
+    .mobile-menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        top: 53px;
+        background: var(--tab-nav-color);
+        z-index: 10;
+    }
+
+    .nav-mobile{
+        display: inline-block;
+        color: var(--main-btn-color);
+    }
+
+    .setInvisible{
+        display: none;
+    }
+
+    .name-contact-wrapper{
+        width: content-box;
     }
 
 }

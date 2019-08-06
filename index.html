@@ -6,21 +6,40 @@
     <link rel="stylesheet" href="stylesheet/stylesheet.css" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./resources/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main-container">
         <!-- HEADER  -->
         <div class="header">
-            <img class="nav-logo" src="resources/logo_transparent.png" alt="OLECH" height="70" width="70"/>
-            <div class="nav-btn"><a>Contact</a></div>
-            <div class="nav-btn"><a>Portfolio</a></div>
-            <div class="nav-btn"><a>Skills</a></div>
-            <div class="nav-btn"><a>About Me</a></div>
+            <img class="nav-logo"
+                 src="resources/logo_transparent.png"
+                 alt="OLECH"
+                 height="70"
+                 width="70"
+                 onclick="window.location.hash = 'main-page-container'"
+            />
+            <div class="nav-btn"><a href="#contact-container">Contact</a></div>
+            <div class="nav-btn"><a href="#portfolio-container">Portfolio</a></div>
+            <div class="nav-btn"><a href="#skills-container">Skills</a></div>
+            <div class="nav-btn"><a href="#about-me-container">About Me</a></div>
+            <div class="hamburger-btn">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+        <div class="mobile-menu setInvisible">
+            <a class="nav-btn nav-mobile" href="#contact-container">Contact</a>
+            <a class="nav-btn nav-mobile" href="#portfolio-container">Portfolio</a>
+            <a class="nav-btn nav-mobile" href="#skills-container">Skills</a>
+            <a class="nav-btn nav-mobile" href="#about-me-container">About Me</a>
         </div>
 
         <!-- MAIN PAGE  -->
-        <div class="main-page-container">
+        <div class="main-page-container" id="main-page-container">
             <div class="logo-container">
+
                 <img class="logo" src="resources/logo_parts/left.png" alt="OLECH"/>
                 <img class="logo p1" src="resources/logo_parts/right.png" alt="OLECH"/>
                 <img class="logo p2" src="resources/logo_parts/left.png" alt="OLECH"/>
@@ -34,10 +53,9 @@
             <img class="logo-bottom" src="resources/logo_bottom.png" alt="OLECH"/>
         </div>
 
-        </div>
 
         <!-- ABOUT ME  -->
-        <div class="about-me-container">
+        <div class="about-me-container" id="about-me-container">
             <div class="face-container">
                 <img src="resources/face.png" alt="My Face"/>
             </div>
@@ -49,7 +67,7 @@
         </div>
 
         <!-- SKILLS  -->
-        <div class="skills-container">
+        <div class="skills-container" id="skills-container">
             <div class="skills-box">
                 <svg class="icon icon-display skills-icons">
                     <use xlink:href="#icon-display">
@@ -89,7 +107,7 @@
         </div>
 
         <!-- PORTFOLIO  -->
-        <div class="portfolio-container">
+        <div class="portfolio-container" id="portfolio-container">
             <div class="portfolio-section">
                 <a class="portfolio-box" href="https://github.com/micavanco/Bookshelf" target="_blank">
                     <h3>BookShelf</h3>
@@ -112,14 +130,14 @@
                     <img src="resources/fileToSQLApp.png" alt="https://github.com/micavanco/FileToSQLApp"/>
                 </a>
                 <a class="portfolio-box" href="https://github.com/micavanco/AssemblerTemperatureMeasurement" target="_blank">
-                    <h3>AssemblerTempMeasurement</h3>
+                    <h4>AssemblerTempMeasurement</h4>
                     <img src="resources/assembly.jpg" alt="https://github.com/micavanco/AssemblerTemperatureMeasurement"/>
                 </a>
             </div>
         </div>
 
         <!-- CONTACT  -->
-        <div class="contact-container">
+        <div class="contact-container" id="contact-container">
             <div class="contact-wrapper">
 
                 <div id="card" class="contact-card">
@@ -186,12 +204,12 @@
 
                         <div class="contact-section contact-crl-first flip-card">
                             <div class="contact-icon flip-card info-padding">GitHub:<br/>
-                                <span id="github">github.com/micavanco</span></div>
+                                <div id="github">github.com/micavanco</div></div>
                         </div>
 
                         <div class="contact-section contact-crl-second flip-card">
                             <div class="contact-icon flip-card info-padding">Phone:<br/>
-                                <span style="color: aliceblue;">+48513514703</span></div>
+                                <span id="number" style="color: aliceblue;">+48513514703</span></div>
                             <div class="contact-label flip-card">
                                 <div class="name-contact-wrapper">
                                     <h3 style="text-align: right">Michał Olech</h3>
@@ -202,9 +220,7 @@
 
                         <div id="email-info" class="contact-section contact-crl-third flip-card">
                             <div class="contact-icon flip-card info-padding">E-Mail:<br/>
-                                <a id="email">
-                                    michal.olech.mail@gmail.com
-                                </a>
+                                <div id="email">michal.olech.mail@gmail.com</div>
                             </div>
                         </div>
 
@@ -221,6 +237,7 @@
         </div>
 
     </div>
+    <script type="text/javascript"  src="./scripts/mobile-menu.js"></script>
     <script type="text/javascript"  src="./scripts/contact-card.js"></script>
     <script type="text/javascript"  src="./scripts/scroll-animation.js"></script>
     <script type="text/javascript"  src="./scripts/logo-animation.js"></script>
